@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="firstBackground" format="reference|color"/>
+    <attr name="secondBackground" format="reference|color"/>
+    <attr name="thirdBackground" format="reference|color"/>
+
+    <attr name="secondOutline" format="reference|color"/>
+    <attr name="thirdOutline" format="reference|color"/>
+
+    <attr name="firstText" format="reference|color"/>
+    <attr name="secondText" format="reference|color"/>
+    <attr name="thirdText" format="reference|color"/>
+
+</resources>
