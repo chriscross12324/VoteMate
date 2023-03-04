@@ -13,6 +13,9 @@
         android:theme="@style/Theme.VoteMate"
         tools:targetApi="31">
         <activity
+            android:name=".PageRegister"
+            android:exported="false" />
+        <activity
             android:name=".PageLogin"
             android:exported="false" />
         <activity
