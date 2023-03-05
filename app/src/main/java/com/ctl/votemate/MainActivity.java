@@ -4,20 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.LinearLayout;
 
 public class MainActivity extends AppCompatActivity {
-private LinearLayout buttonLoginPage;
-private LinearLayout buttonRegisterPage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        buttonLoginPage = findViewById(R.id.buttonLogin);
-        buttonRegisterPage = findViewById(R.id.buttonRegister);
 
+        //Declare UI Elements
+        LinearLayout buttonLoginPage = findViewById(R.id.buttonLogin);
+        LinearLayout buttonRegisterPage = findViewById(R.id.buttonRegister);
+
+        //Navigation Buttons
         buttonLoginPage.setOnClickListener(v -> {
             Intent pageLogin = new Intent(this,PageLogin.class);
             startActivity(pageLogin);
