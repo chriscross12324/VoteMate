@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">VoteMate</string>
-    <string name="appName">VoteMate</string>
     <string name="appDesc">A voting system for handling company decisions.</string>
     <string name="agreeText">By continuing, you agree to our <b>User Agreement</b> and <b>Privacy Policy</b></string>
 </resources>

@@ -29,7 +29,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/appName"
+            android:text="@string/app_name"
             android:textColor="?firstText"
             android:textSize="30sp"
             android:fontFamily="@font/rounded_extrabold"
@@ -59,20 +59,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginVertical="20dp">
+            android:layout_margin="20dp">
 
             <LinearLayout
                 android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="20dp"
                 android:gravity="center"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toTopOf="@+id/textView"
-                app:layout_constraintEnd_toStartOf="@+id/textView"
-                app:layout_constraintStart_toEndOf="@+id/textView"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="20dp">
 
                 <com.google.android.material.card.MaterialCardView
                     android:layout_width="match_parent"
@@ -80,11 +76,11 @@
                     app:cardBackgroundColor="?thirdBackground"
                     app:cardCornerRadius="15dp"
                     app:cardElevation="0dp"
-                    app:strokeColor="?thirdOutline"
-                    app:strokeWidth="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:strokeColor="?thirdOutline"
+                    app:strokeWidth="2dp">
 
                     <LinearLayout
                         android:id="@+id/buttonLogin"
@@ -117,11 +113,11 @@
                     app:cardBackgroundColor="?thirdBackground"
                     app:cardCornerRadius="15dp"
                     app:cardElevation="0dp"
-                    app:strokeColor="?thirdOutline"
-                    app:strokeWidth="2dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent">
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:strokeColor="?thirdOutline"
+                    app:strokeWidth="2dp">
 
                     <LinearLayout
                         android:id="@+id/buttonRegister"
@@ -145,19 +141,6 @@
                 </com.google.android.material.card.MaterialCardView>
             </LinearLayout>
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/rounded_regular"
-                android:paddingHorizontal="24dp"
-                android:text="@string/agreeText"
-                android:textAlignment="textStart"
-                android:textColor="?secondText"
-                android:textSize="12sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
