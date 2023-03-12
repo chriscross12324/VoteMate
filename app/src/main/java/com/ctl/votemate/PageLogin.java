@@ -18,7 +18,37 @@ public class PageLogin extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_page_login);
 
+        //Declare UI Elements
+        EditText inputEmail = findViewById(R.id.emailInputText);
+        EditText inputPassword = findViewById(R.id.passwordInputText);
         CardView buttonBack = findViewById(R.id.buttonBack);
+        CardView buttonContinue = findViewById(R.id.buttonContinue);
+
+        buttonContinue.setOnClickListener(v -> {
+            try {
+                if (isValidEmail(inputEmail.getText().toString().trim()) && inputPassword.getText().length() >= 1) {
+                    GlobalVariables.globalAuth.signInWithEmailAndPassword(
+                            inputEmail.getText().toString().trim(),
+                            inputPassword.getText().toString()
+                    ).addOnCompleteListener(this, task -> {
+                        if (task.isSuccessful()) {
+                            //Sign in Successful; Re-route user to Voting Page
+                            Log.d("MSG", "signInSuccessful");
+                        }
+                    }).addOnFailureListener(e -> {
+                        //Sign in Unsuccessful; Display error dialog
+                        Log.e("MSG", "signInError: " + e.getMessage());
+                        displayErrorDialog(e.getMessage());
+                    });
+                } else {
+                    displayErrorDialog("The Email Address or Password are invalid, please correct any mistakes");
+                }
+            } catch (Exception e) {
+                displayErrorDialog(e.getMessage());
+            }
+        });
+
+
         buttonBack.setOnClickListener(n -> {
             finish();
         });
