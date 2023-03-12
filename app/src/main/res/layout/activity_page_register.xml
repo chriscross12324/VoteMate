@@ -146,7 +146,7 @@
                         android:background="@android:color/transparent"
                         android:fontFamily="@font/rounded_bold"
                         android:hint="Invite Code"
-                        android:inputType="textPassword"
+                        android:inputType="textCapCharacters"
                         android:maxLength="70"
                         android:singleLine="true"
                         android:textColor="?firstText"
@@ -199,6 +199,7 @@
                     android:layout_width="5dp"
                     android:layout_height="0dp"/>
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/buttonContinue"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     app:cardBackgroundColor="?thirdBackground"

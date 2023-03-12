@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.EditText;
@@ -38,13 +39,13 @@ public class PageLogin extends AppCompatActivity {
                     }).addOnFailureListener(e -> {
                         //Sign in Unsuccessful; Display error dialog
                         Log.e("MSG", "signInError: " + e.getMessage());
-                        displayErrorDialog(e.getMessage());
+                        displayErrorDialog(this, e.getMessage());
                     });
                 } else {
-                    displayErrorDialog("The Email Address or Password are invalid, please correct any mistakes");
+                    displayErrorDialog(this, "The Email Address or Password are invalid, please correct any mistakes");
                 }
             } catch (Exception e) {
-                displayErrorDialog(e.getMessage());
+                displayErrorDialog(this, e.getMessage());
             }
         });
 
@@ -54,8 +55,8 @@ public class PageLogin extends AppCompatActivity {
         });
     }
 
-    private void displayErrorDialog(String msg) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+    public static void displayErrorDialog(Context context, String msg) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(context);
         builder.setMessage(msg).setNeutralButton("Ok", (dialog, which) -> {
             dialog.dismiss();
         });

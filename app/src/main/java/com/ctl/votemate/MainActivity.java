@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         GlobalVariables.globalUser = GlobalVariables.globalAuth.getCurrentUser();
 
         if (GlobalVariables.globalUser != null) {
-            Intent pageLogin = new Intent(this,PageLogin.class);
+            Intent pageLogin = new Intent(this, PageVote.class);
             startActivity(pageLogin);
         } else {
             //Declare UI Elements
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
             //Navigation Buttons
             buttonLoginPage.setOnClickListener(v -> {
-                Intent pageLogin = new Intent(this,PageLogin.class);
+                Intent pageLogin = new Intent(this, PageLogin.class);
                 startActivity(pageLogin);
             });
             buttonRegisterPage.setOnClickListener(v ->{
