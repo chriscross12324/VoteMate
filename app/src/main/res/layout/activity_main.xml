@@ -71,6 +71,7 @@
                 tools:layout_editor_absoluteX="20dp">
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/buttonLogin"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     app:cardBackgroundColor="?thirdBackground"
@@ -83,7 +84,6 @@
                     app:strokeWidth="2dp">
 
                     <LinearLayout
-                        android:id="@+id/buttonLogin"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center">
@@ -108,6 +108,7 @@
                     android:layout_height="10dp" />
 
                 <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/buttonRegister"
                     android:layout_width="match_parent"
                     android:layout_height="60dp"
                     app:cardBackgroundColor="?thirdBackground"
@@ -120,7 +121,6 @@
                     app:strokeWidth="2dp">
 
                     <LinearLayout
-                        android:id="@+id/buttonRegister"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center">
